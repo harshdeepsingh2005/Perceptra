@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CX-Twin | Simulate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(ellipse at center, #1e1b4b 0%, #0f172a 100%);
+    }
+    .star {
+      width: 4px;
+      height: 4px;
+      background-color: #c084fc;
+      border-radius: 9999px;
+      opacity: 0.3;
+      position: absolute;
+      animation: starPulse 4s infinite ease-in-out;
+    }
+    @keyframes starPulse {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.6); }
+    }
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 6px #6b21a8) drop-shadow(0 0 12px #6b21a8);
+      }
+      50% {
+        filter: drop-shadow(0 0 10px #9333ea) drop-shadow(0 0 20px #9333ea);
+      }
+    }
+    .emoji-glow {
+      animation: floatIcon 6s ease-in-out infinite, pulseGlow 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="text-white min-h-screen overflow-x-hidden relative">
+
+<!-- Glowing Stars -->
+  <div class="fixed inset-0 -z-40 pointer-events-none">
+    <div class="star" style="top:10%; left:20%; animation-delay: 1s;"></div>
+    <div class="star" style="top:25%; left:65%; animation-delay: 2.5s;"></div>
+    <div class="star" style="top:40%; left:80%; animation-delay: 1.8s;"></div>
+    <div class="star" style="top:70%; left:50%; animation-delay: 2.2s;"></div>
+    <div class="star" style="top:60%; left:15%; animation-delay: 3s;"></div>
+    <div class="star" style="top:85%; left:35%; animation-delay: 2s;"></div>
+    <div class="star" style="top:15%; left:5%; animation-delay: 2.8s;"></div>
+    <div class="star" style="top:45%; left:95%; animation-delay: 1.2s;"></div>
+    <div class="star" style="top:12%; left:45%; animation-delay: 1.6s;"></div>
+    <div class="star" style="top:35%; left:10%; animation-delay: 2.1s;"></div>
+    <div class="star" style="top:58%; left:85%; animation-delay: 1.9s;"></div>
+    <div class="star" style="top:72%; left:25%; animation-delay: 2.3s;"></div>
+    <div class="star" style="top:88%; left:70%; animation-delay: 3.2s;"></div>
+    <div class="star" style="top:20%; left:90%; animation-delay: 2.7s;"></div>
+    <div class="star" style="top:52%; left:40%; animation-delay: 2.4s;"></div>
+    <div class="star" style="top:65%; left:5%; animation-delay: 1.4s;"></div>
+  </div>
+
+  <!-- Floating Emojis -->
+  <div class="fixed inset-0 -z-50 pointer-events-none">
+    <div class="absolute text-2xl opacity-30 emoji-glow" style="top:5%; left:8%;">📈</div>
+    <div class="absolute text-4xl opacity-20 emoji-glow animation-delay-200" style="top:12%; left:25%;">🧠</div>
+    <div class="absolute text-5xl opacity-10 emoji-glow animation-delay-400" style="top:15%; right:18%;">📊</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-500" style="top:28%; right:5%;">💡</div>
+    <div class="absolute text-6xl opacity-10 emoji-glow animation-delay-300" style="top:30%; left:45%;">💬</div>
+    <div class="absolute text-3xl opacity-30 emoji-glow animation-delay-500" style="top:38%; right:32%;">🧪</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-600" style="top:12%; left:60%;">⚙️</div>
+    <div class="absolute text-4xl opacity-20 emoji-glow animation-delay-100" style="top:70%; right:50%;">🧍</div>
+    <div class="absolute text-6xl opacity-10 emoji-glow animation-delay-300" style="top:78%; left:5%;">💻</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-400" style="top:90%; right:6%;">✨</div>
+    <div class="absolute text-3xl opacity-20 emoji-glow animation-delay-500" style="top:55%; left:30%;">🎯</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-600" style="top:22%; right:25%;">🚀</div>
+    <div class="absolute text-4xl opacity-25 emoji-glow animation-delay-400" style="top:48%; left:8%;">📦</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-300" style="top:32%; right:10%;">🔍</div>
+    <div class="absolute text-5xl opacity-15 emoji-glow animation-delay-300" style="top:52%; left:70%;">🪄</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-200" style="top:62%; right:20%;">📡</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-100" style="top:76%; left:20%;">🔬</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-500" style="top:82%; right:30%;">🤖</div>
+    <div class="absolute text-2xl opacity-25 emoji-glow animation-delay-200" style="top:65%; left:45%;">📥</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-300" style="top:50%; right:5%;">📠</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-100" style="top:38%; left:30%;">📟</div>
+    <div class="absolute text-2xl opacity-20 emoji-glow animation-delay-200" style="top:5%; right:40%;">🧭</div>
+    <div class="absolute text-2xl opacity-25 emoji-glow animation-delay-300" style="top:60%; left:12%;">🎛️</div>
+    <div class="absolute text-3xl opacity-20 emoji-glow animation-delay-400" style="top:85%; right:12%;">📞</div>
+  </div>
+
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/5 backdrop-blur-2xl border-b border-white/10 shadow-inner shadow-purple-400/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="../static/assets/logo.png" alt="CX-Twin Logo" class="h-16 w-auto drop-shadow-2xl" />
+      <nav class="space-x-6 text-white font-medium">
+        <a href="/" class="hover:text-yellow-300 transition">Home</a>
+        <a href="/simulate" class="hover:text-yellow-300 transition">Simulate</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 text-center px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">🧠 What do you want to simulate?</h1>
+    <p class="text-lg text-slate-300 mb-6">Choose a behavioral scenario to explore how your AI-powered customer twin would react.</p>
+  </section>
+
+  <!-- Scenario Cards -->
+  <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 px-4 mb-12">
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl shadow-lg shadow-purple-500/10">
+      <h2 class="text-xl font-semibold text-yellow-300 mb-2">📈 Price Hike</h2>
+      <p class="text-slate-300 text-sm">See how customers with different patience and satisfaction levels react to pricing changes.</p>
+    </div>
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl shadow-lg shadow-purple-500/10">
+      <h2 class="text-xl font-semibold text-yellow-300 mb-2">⏳ Support Delay</h2>
+      <p class="text-slate-300 text-sm">Model the impact of slow support on stressed or low-patience users.</p>
+    </div>
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl shadow-lg shadow-purple-500/10">
+      <h2 class="text-xl font-semibold text-yellow-300 mb-2">🎨 UI Redesign</h2>
+      <p class="text-slate-300 text-sm">Test reactions to major design changes or navigation updates.</p>
+    </div>
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl shadow-lg shadow-purple-500/10">
+      <h2 class="text-xl font-semibold text-yellow-300 mb-2">🐞 Bug Report Ignored</h2>
+      <p class="text-slate-300 text-sm">Simulate user churn after unresolved feedback or bugs.</p>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="max-w-3xl mx-auto px-4 pb-20">
+    <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-lg shadow-yellow-400/10">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">Run Your Simulation</h2>
+      <form action="/simulate" method="POST" class="space-y-6">
+
+        <!-- Scenario -->
+        <div>
+          <label for="scenario" class="block text-sm text-slate-300 mb-1">Scenario</label>
+          <select name="scenario" id="scenario" required class="w-full px-4 py-2 bg-black/30 text-white rounded border border-yellow-400">
+            <option value="price_hike">Price Hike</option>
+            <option value="support_delay">Support Delay</option>
+            <option value="ui_redesign">UI Redesign</option>
+            <option value="bug_report_ignored">Bug Report Ignored</option>
+          </select>
+        </div>
+
+        <!-- Sliders with live values -->
+        <div>
+          <label class="block text-sm text-slate-300">Stress: <span id="stressValue" class="text-yellow-300">0.5</span></label>
+          <input type="range" name="stress" min="0" max="1" step="0.01" value="0.5" class="w-full" oninput="stressValue.innerText = this.value">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-300">Satisfaction: <span id="satisfactionValue" class="text-yellow-300">0.5</span></label>
+          <input type="range" name="satisfaction" min="0" max="1" step="0.01" value="0.5" class="w-full" oninput="satisfactionValue.innerText = this.value">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-300">Patience: <span id="patienceValue" class="text-yellow-300">0.5</span></label>
+          <input type="range" name="patience" min="0" max="1" step="0.01" value="0.5" class="w-full" oninput="patienceValue.innerText = this.value">
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button type="submit" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition">
+            Simulate →
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-slate-400 py-6">
+    Made with 💛 for the future of CX · © 2025 CX-Twin
+  </footer>
+
+</body>
+</html>

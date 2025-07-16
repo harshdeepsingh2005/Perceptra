@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CX-Twin | Predictive Customer Twin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(ellipse at center, #1e1b4b 0%, #0f172a 100%);
+    }
+
+    .animation-delay-200 { animation-delay: 0.2s; }
+    .animation-delay-300 { animation-delay: 0.3s; }
+    .animation-delay-400 { animation-delay: 0.4s; }
+    .animation-delay-500 { animation-delay: 0.5s; }
+    .animation-delay-600 { animation-delay: 0.6s; }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 6px #6b21a8) drop-shadow(0 0 12px #6b21a8);
+      }
+      50% {
+        filter: drop-shadow(0 0 10px #9333ea) drop-shadow(0 0 20px #9333ea);
+      }
+    }
+
+    .emoji-glow {
+      animation: floatIcon 6s ease-in-out infinite, pulseGlow 3s ease-in-out infinite;
+    }
+
+    .star {
+      width: 4px;
+      height: 4px;
+      background-color: #c084fc;
+      border-radius: 9999px;
+      opacity: 0.3;
+      position: absolute;
+      animation: starPulse 4s infinite ease-in-out;
+    }
+
+    @keyframes starPulse {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.6); }
+    }
+  </style>
+</head>
+<body class="text-white min-h-screen overflow-x-hidden relative">
+
+  <!-- Glowing Stars -->
+  <div class="fixed inset-0 -z-40 pointer-events-none">
+    <div class="star" style="top:10%; left:20%; animation-delay: 1s;"></div>
+    <div class="star" style="top:25%; left:65%; animation-delay: 2.5s;"></div>
+    <div class="star" style="top:40%; left:80%; animation-delay: 1.8s;"></div>
+    <div class="star" style="top:70%; left:50%; animation-delay: 2.2s;"></div>
+    <div class="star" style="top:60%; left:15%; animation-delay: 3s;"></div>
+    <div class="star" style="top:85%; left:35%; animation-delay: 2s;"></div>
+    <div class="star" style="top:15%; left:5%; animation-delay: 2.8s;"></div>
+    <div class="star" style="top:45%; left:95%; animation-delay: 1.2s;"></div>
+    <div class="star" style="top:12%; left:45%; animation-delay: 1.6s;"></div>
+    <div class="star" style="top:35%; left:10%; animation-delay: 2.1s;"></div>
+    <div class="star" style="top:58%; left:85%; animation-delay: 1.9s;"></div>
+    <div class="star" style="top:72%; left:25%; animation-delay: 2.3s;"></div>
+    <div class="star" style="top:88%; left:70%; animation-delay: 3.2s;"></div>
+    <div class="star" style="top:20%; left:90%; animation-delay: 2.7s;"></div>
+    <div class="star" style="top:52%; left:40%; animation-delay: 2.4s;"></div>
+    <div class="star" style="top:65%; left:5%; animation-delay: 1.4s;"></div>
+  </div>
+
+  <!-- Floating Emojis -->
+  <div class="fixed inset-0 -z-50 pointer-events-none">
+    <div class="absolute text-2xl opacity-30 emoji-glow" style="top:5%; left:8%;">📈</div>
+    <div class="absolute text-4xl opacity-20 emoji-glow animation-delay-200" style="top:12%; left:25%;">🧠</div>
+    <div class="absolute text-5xl opacity-10 emoji-glow animation-delay-400" style="top:15%; right:18%;">📊</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-500" style="top:28%; right:5%;">💡</div>
+    <div class="absolute text-6xl opacity-10 emoji-glow animation-delay-300" style="top:30%; left:45%;">💬</div>
+    <div class="absolute text-3xl opacity-30 emoji-glow animation-delay-500" style="top:38%; right:32%;">🧪</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-600" style="top:12%; left:60%;">⚙️</div>
+    <div class="absolute text-4xl opacity-20 emoji-glow animation-delay-100" style="top:70%; right:50%;">🧍</div>
+    <div class="absolute text-6xl opacity-10 emoji-glow animation-delay-300" style="top:78%; left:5%;">💻</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-400" style="top:90%; right:6%;">✨</div>
+    <div class="absolute text-3xl opacity-20 emoji-glow animation-delay-500" style="top:55%; left:30%;">🎯</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-600" style="top:22%; right:25%;">🚀</div>
+    <div class="absolute text-4xl opacity-25 emoji-glow animation-delay-400" style="top:48%; left:8%;">📦</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-300" style="top:32%; right:10%;">🔍</div>
+    <div class="absolute text-5xl opacity-15 emoji-glow animation-delay-300" style="top:52%; left:70%;">🪄</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-200" style="top:62%; right:20%;">📡</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-100" style="top:76%; left:20%;">🔬</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-500" style="top:82%; right:30%;">🤖</div>
+    <div class="absolute text-2xl opacity-25 emoji-glow animation-delay-200" style="top:65%; left:45%;">📥</div>
+    <div class="absolute text-2xl opacity-30 emoji-glow animation-delay-300" style="top:50%; right:5%;">📠</div>
+    <div class="absolute text-3xl opacity-25 emoji-glow animation-delay-100" style="top:38%; left:30%;">📟</div>
+    <div class="absolute text-2xl opacity-20 emoji-glow animation-delay-200" style="top:5%; right:40%;">🧭</div>
+    <div class="absolute text-2xl opacity-25 emoji-glow animation-delay-300" style="top:60%; left:12%;">🎛️</div>
+    <div class="absolute text-3xl opacity-20 emoji-glow animation-delay-400" style="top:85%; right:12%;">📞</div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/5 backdrop-blur-2xl border-b border-white/10 shadow-inner shadow-purple-400/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <img src="../static/assets/logo.png" alt="CX-Twin Logo" class="h-16 w-auto drop-shadow-2xl" />
+  
+
+    <nav class="space-x-6 text-white font-medium">
+      <a href="/" class="transition-all duration-300 hover:text-yellow-300 hover:underline underline-offset-4">Home</a>
+      <a href="/simulate" class="transition-all duration-300 hover:text-yellow-300 hover:underline underline-offset-4">Simulate</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero -->
+  <section class="text-center pt-32 pb-10 px-6 relative z-10">
+
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4  animate-slide-up animation-delay-200" style="animation-fill-mode: forwards;">
+      Simulate Customer Experience <br>with AI Digital Twins
+    </h1>
+    <p class="text-lg text-slate-300 max-w-xl mx-auto mb-6  animate-slide-up animation-delay-400" style="animation-fill-mode: forwards;">
+      Predict customer satisfaction, churn risk, and behavioral outcomes before deploying major changes.
+    </p>
+    <a href="/simulate" class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full hover:scale-105 hover:bg-yellow-300 transition duration-300">
+      Try Simulation →
+    </a>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 px-6 relative z-10">
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="bg-slate-800 rounded-2xl shadow-2xl shadow-yellow-400/10 px-8 py-12 border border-white/10">
+        <h2 class="text-3xl font-bold mb-8 text-white">What CX-Twin Can Do</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-lg text-slate-200">
+          <div class=" animate-slide-up animation-delay-200" style="animation-fill-mode: forwards;">📊 Predict churn and satisfaction using behavioral models</div>
+          <div class=" animate-slide-up animation-delay-300" style="animation-fill-mode: forwards;">🔁 Simulate pricing, support, UI, and delivery changes</div>
+          <div class=" animate-slide-up animation-delay-400" style="animation-fill-mode: forwards;">🧠 Generate digital twins from customer history</div>
+          <div class="animate-slide-up animation-delay-500" style="animation-fill-mode: forwards;">📍 Personalize interventions for each segment</div>
+          <div class="animate-slide-up animation-delay-200" style="animation-fill-mode: forwards;">⏱️ Run “what-if” experiments before rollout</div>
+          <div class=" animate-slide-up animation-delay-300" style="animation-fill-mode: forwards;">📈 Visualize outcomes with interactive dashboards</div>
+          <div class="animate-slide-up animation-delay-400" style="animation-fill-mode: forwards;">🗃️ Save session logs for learning and tuning</div>
+          <div class="animate-slide-up animation-delay-500" style="animation-fill-mode: forwards;">🛠️ Integrate with real-time APIs and live data</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-16 relative z-10">
+    <h3 class="text-2xl font-semibold mb-4">Ready to reimagine your customer experience?</h3>
+    <a href="/simulate" class="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition">
+      Start a Simulation
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 py-4 text-center text-sm text-slate-400 relative z-10">
+    Built with ❤️ for AI Hackathon · © 2025 CX-Twin
+  </footer>
+
+</body>
+</html>
