@@ -70,3 +70,24 @@ python app.py
 For detailed usage instructions, see the documentation.
 
 <p align="center"> <img src="https://img.shields.io/badge/-💬-ff69b4?style=for-the-badge&logo=github" /> </p>
+
+🤝 Contributing
+
+We welcome contributions!
+
+Fork the repository
+
+Create a new branch
+
+Submit a Pull Request
+
+See CONTRIBUTING.md
+ for guidelines.
+
+📄 License
+
+MIT License – see LICENSE
+.
+
+🌐 Connect With Me
+<p align="center"> <a href="https://www.linkedin.com/in/harshdeep-singh-28a4a6283/"> <img src="https://img.shields.io/badge/LinkedIn-Harshdeep%20Singh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /> </a> <a href="mailto:harshdeepsinghsabharwal@gmail.com"> <img src="https://img.shields.io/badge/Email-harshdeepsinghsabharwal%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a> </p> <!-- Footer Wave --> <p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:ff6ec7&height=120&section=footer" /> </p> ```
